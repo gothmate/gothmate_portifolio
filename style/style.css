@@ -138,7 +138,8 @@ aside {
 
 main {
   padding-left: 9.5rem;
-  overflow-x: hidden;
+  max-height: 100vh;
+  overflow: hidden;
 }
 main #home {
   position: relative;
@@ -153,30 +154,30 @@ main #home .big {
   transform: scale(1000%);
   z-index: -1;
 }
-main .home {
+main #home .home {
   right: 50%;
   top: 70%;
 }
-main .texto {
+main #home .texto {
   width: 40%;
   height: 350px;
   color: #fff;
 }
-main .texto h1 {
+main #home .texto h1 {
   font-size: 5rem;
   font-weight: 700;
 }
-main .texto p {
+main #home .texto p {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.8;
 }
-main .profile {
+main #home .profile {
   width: 50%;
   display: flex;
   justify-content: flex-end;
 }
-main .profilepic {
+main #home .profilepic {
   position: relative;
   width: 350px;
   height: 350px;
@@ -184,16 +185,16 @@ main .profilepic {
   border: solid 10px #4a4a4a;
   overflow: hidden;
 }
-main .profilepic img {
+main #home .profilepic img {
   position: absolute;
   left: -10%;
   top: -25%;
 }
-main .logos a {
+main #home a {
   text-decoration: none;
   margin-inline: 1rem;
 }
-main .logos a:hover {
+main #home a:hover {
   filter: brightness(0.7);
 }
 main #works {

@@ -191,7 +191,8 @@ aside
 
 main
   padding-left: 9.5rem
-  overflow-x: hidden
+  max-height: 100vh
+  overflow: hidden
 
   // ======================================
   #home
@@ -199,39 +200,39 @@ main
     @include sectionCongig
     & .big
       @include big
-  .home
-    right: 50%
-    top: 70%
+    & .home
+      right: 50%
+      top: 70%
 
-  .texto
-    width: 40%
-    height: 350px
-    color: #fff
-    & h1
-      font-size: 5rem
-      font-weight: 700
-    & p
-      font-size: 1.2rem
-      font-weight: 300
-      line-height: 1.8
+    & .texto
+      width: 40%
+      height: 350px
+      color: #fff
+      & h1
+        font-size: 5rem
+        font-weight: 700
+      & p
+        font-size: 1.2rem
+        font-weight: 300
+        line-height: 1.8
 
-  .profile
-    width: 50%
-    display: flex
-    justify-content: flex-end
+    & .profile
+      width: 50%
+      display: flex
+      justify-content: flex-end
 
-  .profilepic
-    position: relative
-    width: 350px
-    height: 350px
-    border-radius: 50%
-    border: solid 10px variables.$menu
-    overflow: hidden
-  .profilepic img
-    position: absolute
-    left: -10%
-    top: -25%
-  .logos
+    & .profilepic
+      position: relative
+      width: 350px
+      height: 350px
+      border-radius: 50%
+      border: solid 10px variables.$menu
+      overflow: hidden
+    & .profilepic img
+      position: absolute
+      left: -10%
+      top: -25%
+    & .logos
     & a
       text-decoration: none
       margin-inline: 1rem
