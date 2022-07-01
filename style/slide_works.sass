@@ -1,0 +1,110 @@
+@use 'variables'
+
+@mixin slideList
+    list-style-type: none
+    margin: 10px 0
+    padding: 0
+    position: relative
+    left: calc($selected-item * -100%)
+    width: calc($total-items * 100%)
+    transition: left 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550)
+
+    display: grid
+    grid-auto-flow: column
+    grid-auto-columns: 1fr
+    $selected-item: 0
+    $total-items: 4
+
+@mixin sectionContainer
+    position: relative
+    width: 100%
+    padding: 0 10rem
+
+@mixin radioAppearence
+    appearance: none
+    background-color: #797979
+    padding: 0.2rem
+    margin: 0
+    font: inherit
+    color: rgb(94, 94, 94)
+    width: .5rem
+    height: .5rem
+    border: 0.15rem solid currentColor
+    border-radius: 50%
+    transform: translateY(-0.075em)
+    &:focus
+        appearance: none
+        background-color: #363636
+        margin: 0
+        font: inherit
+        color: #ccc
+        width: .6rem
+        height: .6rem
+        border: 0.15rem solid currentColor
+        border-radius: 50%
+        transform: translateY(-0.075em)
+        outline: none
+
+@mixin sectionCongig
+    width: 90vw
+    height: 100vh
+    display: flex
+    align-items: flex-start
+    padding-top: 5rem
+
+#works
+    position: relative
+    @include sectionCongig
+    & .container
+        @include sectionContainer
+
+        & .slide
+            & img
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)
+
+        &.slide-controller
+            margin-top: 3rem
+            padding: .5rem
+            &:nth-child(1):checked ~ .slide-show .slides-list
+                $selected-item: 0
+
+            &:nth-child(2):checked ~ .slide-show .slides-list
+                $selected-item: 1
+
+            &:nth-child(3):checked ~ .slide-show .slides-list
+                $selected-item: 2
+
+            &:nth-child(4):checked ~ .slide-show .slides-list
+                $selected-item: 3
+
+        & input[type="radio"]
+            @include radioAppearence
+
+    .slide-show
+        overflow: hidden
+
+    .slides-list
+        @include slideList
+
+    .slide
+        width: 100%
+        & img
+            border-radius: 10px
+            width: 400px
+        & a
+            text-decoration: none
+
+    .textcar
+        padding: 5rem
+        max-width: 36rem
+        & h2
+            font-size: 2.5rem
+            font-weight: 700
+        & p
+            font-family: 'Nunito', sans-serif
+            font-weight: 300
+        & img
+            width: 32px
+            margin-top: 1rem
+        &:hover
+            filter: brightness(0.7)

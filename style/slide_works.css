@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *   ,
+ * 8 |     left: calc($selected-item * -100%)
+ *   |                ^^^^^^^^^^^^^^
+ *   '
+ *   style\slide_works.sass 8:16  slideList()
+ *   style\slide_works.sass 87:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 8 \2502      left: calc($selected-item * -100%)\d\a   \2502                 ^^^^^^^^^^^^^^\a   \2575 \a   style\\slide_works.sass 8:16  slideList()\a   style\\slide_works.sass 87:9  root stylesheet";
+}

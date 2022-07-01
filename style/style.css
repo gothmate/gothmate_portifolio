@@ -1,0 +1,526 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  background: #222;
+}
+
+aside {
+  position: fixed;
+  width: 60px;
+  height: 100vh;
+  background-color: #4a4a4a;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.navigation ul .list {
+  position: relative;
+  list-style: none;
+  width: 40%;
+  height: 70px;
+  padding: 3.5rem 0;
+  transition: 500ms ease-in-out;
+  z-index: 1;
+}
+.navigation ul .list .icon {
+  width: fit-content;
+  transition: 300ms;
+}
+.navigation ul .list .icon:hover {
+  filter: brightness(0.7);
+}
+.navigation ul .list .active {
+  position: absolute;
+  translate: 300ms;
+}
+.navigation ul .list .text {
+  transform: rotate(90deg);
+  opacity: 0;
+  margin-right: 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  transition: 1000ms;
+}
+.navigation .anchor {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.indicator {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 40%;
+  top: calc(18% - 35px + 0rem);
+  background: #222;
+  border-radius: 50%;
+  border: 6px solid #4a4a4a;
+  transition: 0.5s;
+}
+
+.navigation ul li:nth-child(1).active {
+  width: 95%;
+}
+.navigation ul li:nth-child(1).active .text {
+  opacity: 1;
+}
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateY(0rem);
+}
+
+.navigation ul li:nth-child(2).active {
+  width: 95%;
+}
+.navigation ul li:nth-child(2).active .text {
+  opacity: 1;
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateY(7rem);
+}
+
+.navigation ul li:nth-child(3).active {
+  width: 95%;
+}
+.navigation ul li:nth-child(3).active .text {
+  opacity: 1;
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateY(14rem);
+}
+
+.navigation ul li:nth-child(4).active {
+  width: 95%;
+}
+.navigation ul li:nth-child(4).active .text {
+  opacity: 1;
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateY(21rem);
+}
+
+.navigation ul li:nth-child(5).active {
+  width: 95%;
+}
+.navigation ul li:nth-child(5).active .text {
+  opacity: 1;
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateY(28rem);
+}
+
+main {
+  padding-left: 9.5rem;
+  overflow-x: hidden;
+}
+main #home {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+}
+main #home .big {
+  position: absolute;
+  transform: scale(1000%);
+  z-index: -1;
+}
+main .home {
+  right: 50%;
+  top: 70%;
+}
+main .texto {
+  width: 40%;
+  height: 350px;
+  color: #fff;
+}
+main .texto h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+main .texto p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+main .profile {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+main .profilepic {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: solid 10px #4a4a4a;
+  overflow: hidden;
+}
+main .profilepic img {
+  position: absolute;
+  left: -10%;
+  top: -25%;
+}
+main .logos a {
+  text-decoration: none;
+  margin-inline: 1rem;
+}
+main .logos a:hover {
+  filter: brightness(0.7);
+}
+main #works {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+}
+main #works .raindrops {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  z-index: -1;
+}
+main #works .big {
+  position: absolute;
+  transform: scale(1000%);
+  z-index: -1;
+}
+main #works .works {
+  position: absolute;
+  right: 20%;
+  top: 40%;
+}
+main #works .container {
+  position: relative;
+  width: 100%;
+  padding: 0 10rem;
+}
+main #works .container.slide img {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+main #works .container.slide-controller {
+  margin-top: 3rem;
+  padding: 0.5rem;
+}
+main #works .container input[type=radio] {
+  appearance: none;
+  background-color: #797979;
+  padding: 0.2rem;
+  margin: 0;
+  font: inherit;
+  color: #5e5e5e;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0.15rem solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+}
+main #works .container input[type=radio]:focus {
+  appearance: none;
+  background-color: #363636;
+  margin: 0;
+  font: inherit;
+  color: #ccc;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 0.15rem solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  outline: none;
+}
+main #works .container .slide-show {
+  overflow: hidden;
+}
+main #works .container .slides-list {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: 0%;
+  width: 400%;
+  transition: left 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+main #works .container .slide {
+  width: 100%;
+}
+main #works .container .slide img {
+  border-radius: 10px;
+  width: 400px;
+}
+main #works .container .slide a {
+  text-decoration: none;
+}
+main #works .container .textcar {
+  padding: 5rem;
+  max-width: 36rem;
+}
+main #works .container .textcar h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+main #works .container .textcar p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+main #works .container .textcar img {
+  width: 32px;
+  margin-top: 1rem;
+}
+main #works .container .textcar img:hover {
+  filter: brightness(0.7);
+}
+main #games {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+  border-top: solid 1rem #272727;
+}
+main #games .big {
+  position: absolute;
+  transform: scale(1000%);
+  z-index: -1;
+}
+main #games .games {
+  position: absolute;
+  right: 20%;
+  top: 70%;
+}
+main #games .container2 {
+  position: relative;
+  width: 100%;
+  padding: 0 10rem;
+}
+main #games .container2 .slide {
+  width: 400px;
+}
+main #games .container2 .game-controller {
+  margin-top: 3rem;
+  padding: 0.5rem;
+}
+main #games .container2 input[type=radio] {
+  appearance: none;
+  background-color: #797979;
+  padding: 0.2rem;
+  margin: 0;
+  font: inherit;
+  color: #5e5e5e;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0.15rem solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+}
+main #games .container2 input[type=radio]:focus {
+  appearance: none;
+  background-color: #363636;
+  margin: 0;
+  font: inherit;
+  color: #ccc;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 0.15rem solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  outline: none;
+}
+main #games .game-show {
+  overflow: hidden;
+}
+main #games .game-list {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: 0%;
+  width: 400%;
+  transition: left 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+main #games .slide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main #games .slide img {
+  border-radius: 10px;
+  width: 400px;
+}
+main #games .slide a {
+  text-decoration: none;
+}
+main #games .slide .textcar {
+  padding-top: 5rem;
+  max-width: 36rem;
+}
+main #games .slide .textcar h2, main #games .slide .textcar p {
+  text-shadow: 15px 15px 5px #181818;
+}
+main #games .slide .textcar h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+main #games .slide .textcar p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+main #games .slide .textcar img {
+  box-shadow: 0 0 0 #00000000;
+  width: 32px;
+  margin-top: 1rem;
+}
+main #games .slide .textcar img:hover {
+  filter: brightness(0.7);
+}
+main #games .circle {
+  position: absolute;
+  width: 1300px;
+  height: 1300px;
+  border: solid 1rem #4a4a4a;
+  border-radius: 50%;
+  right: -20%;
+  z-index: -1;
+}
+main #github {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+}
+main #github .big {
+  position: absolute;
+  transform: scale(1000%);
+  z-index: -1;
+}
+main #github .github {
+  position: absolute;
+  left: 10%;
+  top: 70%;
+}
+main #contact {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+}
+main #contact .getintouch {
+  position: absolute;
+  left: 70%;
+  top: 40%;
+}
+main #contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #contact form .inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+main #contact form .email, main #contact form .name {
+  padding: 0 1rem;
+  width: 38ch;
+  height: 2rem;
+  background: #ffffff21;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+main #contact form textarea {
+  background: #ffffff21;
+  color: #fff;
+  padding: 1rem;
+  width: 80ch;
+  min-height: 20rem;
+  border: none;
+  border-radius: 3px;
+}
+main #contact form button {
+  color: #272727;
+  background: #4a4a4a;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+}
+main #contact form button:hover {
+  filter: brightness(1.3);
+  color: #fff;
+  transition: 50ms ease-in-out;
+}
+main #contact form button:hover:active {
+  box-shadow: inset 2px 2px 10px #181818;
+  color: #7a7a7a;
+}
+main #contact .balao {
+  position: relative;
+  width: 35vw;
+  height: 35vw;
+  padding: 3rem;
+}
+main #contact .balao .big {
+  position: absolute;
+  transform: scale(1000%);
+  z-index: -1;
+  left: 50%;
+  opacity: 0.6;
+}
+main #contact .balao h2 {
+  position: absolute;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 10rem;
+  top: 30%;
+  left: 38%;
+  color: #4a4a4a;
+}
+
+/*# sourceMappingURL=style.css.map */
