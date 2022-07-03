@@ -12,6 +12,7 @@
 			href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@300&family=Nunito:wght@400;600;700&family=Roboto:wght@500&display=swap"
 			rel="stylesheet"
 		/>
+		
 	</head>
 	<body>
 		<aside>
@@ -143,10 +144,10 @@
 			<section id="games" class="sections">
 				<img class="games big" src="./assets/GamesBig.svg" alt="" />
 				<div class="container2">
-					<input type="radio" class="game-controller" name="slide" checked />
-					<input type="radio" class="game-controller" name="slide" />
-					<input type="radio" class="game-controller" name="slide" />
-					<input type="radio" class="game-controller" name="slide" />
+					<input type="radio" class="game-controller2" name="slide" checked />
+					<input type="radio" class="game-controller2" name="slide" />
+					<input type="radio" class="game-controller2" name="slide" />
+					<input type="radio" class="game-controller2" name="slide" />
 
 					<div class="game-show">
 						<ul class="game-list">
@@ -180,13 +181,13 @@
 				<img class="github big" src="./assets/GithubBig.svg" alt="" />
 			</section>
 			<section id="contact" class="sections">
-				<form action="">
+				<form action="mailto:gothmate@gmail.com" method="post" enctype="text/plain">
 					<div class="inputs">
-						<input placeholder="e-mail" class="email" type="email" />
-						<input placeholder="Nome" class="name" type="text" />
+						<input placeholder="e-mail" class="email" type="email" name="email" />
+						<input placeholder="Nome" class="nameCustomer" type="text" name="Nome" />
 					</div>
 					<textarea placeholder="Digite sua mensagem" class="box_text"></textarea>
-					<button onclick="">Enviar</button>
+					<input type="submit" name="submit" value="Enviar" class="submit" onclick="enviaMensagem()" />
 				</form>
 				<div class="balao">
 					<img class="getintouch big" src="./assets/GetInTouchBig.svg" alt="" />
@@ -197,5 +198,6 @@
 		</main>
 
 		<script src="main.js"></script>
+		<!-- <script src="script.js"></script> -->
 	</body>
 </html>
