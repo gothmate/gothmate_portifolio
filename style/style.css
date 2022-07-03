@@ -141,6 +141,13 @@ main {
   max-height: 100vh;
   overflow: hidden;
 }
+main .sections {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+}
 main #home {
   position: relative;
   width: 90vw;
@@ -190,20 +197,15 @@ main #home .profilepic img {
   left: -10%;
   top: -25%;
 }
-main #home a {
+main #home .logos a {
   text-decoration: none;
   margin-inline: 1rem;
 }
-main #home a:hover {
+main #home .logos a:hover {
   filter: brightness(0.7);
 }
 main #works {
   position: relative;
-  width: 90vw;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 5rem;
 }
 main #works .raindrops {
   position: absolute;
@@ -229,12 +231,8 @@ main #works .container {
   width: 100%;
   padding: 0 10rem;
 }
-main #works .container.slide img {
+main #works .container .slide img {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-}
-main #works .container.slide-controller {
-  margin-top: 3rem;
-  padding: 0.5rem;
 }
 main #works .container input[type=radio] {
   appearance: none;
@@ -306,13 +304,27 @@ main #works .container .textcar img {
 main #works .container .textcar img:hover {
   filter: brightness(0.7);
 }
+main .slide-controller {
+  margin-top: 3rem;
+  padding: 0.5rem;
+}
+main .slide-controller:nth-child(1):checked ~ .slide-show .slides-list {
+  --selected-item: 0;
+}
+main .slide-controller:nth-child(2):checked ~ .slide-show .slides-list {
+  --selected-item: 1;
+}
+main .slide-controller:nth-child(3):checked ~ .slide-show .slides-list {
+  --selected-item: 2;
+}
+main .slide-controller:nth-child(4):checked ~ .slide-show .slides-list {
+  --selected-item: 3;
+}
+main .slide-controller:nth-child(5):checked ~ .slide-show .slides-list {
+  --selected-item: 4;
+}
 main #games {
   position: relative;
-  width: 90vw;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 5rem;
   border-top: solid 1rem #272727;
 }
 main #games .big {
@@ -333,7 +345,7 @@ main #games .container2 {
 main #games .container2 .slide {
   width: 400px;
 }
-main #games .container2 .game-controller {
+main #games .container2 .game-controller2 {
   margin-top: 3rem;
   padding: 0.5rem;
 }
@@ -424,11 +436,6 @@ main #games .circle {
 }
 main #github {
   position: relative;
-  width: 90vw;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 5rem;
 }
 main #github .big {
   position: absolute;
@@ -445,11 +452,6 @@ main #contact {
   justify-content: space-between;
   height: 100vh;
   position: relative;
-  width: 90vw;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 5rem;
 }
 main #contact .getintouch {
   position: absolute;
@@ -466,7 +468,7 @@ main #contact form .inputs {
   justify-content: space-between;
   gap: 1rem;
 }
-main #contact form .email, main #contact form .name {
+main #contact form .email, main #contact form .nameCustomer {
   padding: 0 1rem;
   width: 38ch;
   height: 2rem;
@@ -484,7 +486,7 @@ main #contact form textarea {
   border: none;
   border-radius: 3px;
 }
-main #contact form button {
+main #contact form .submit {
   color: #272727;
   background: #4a4a4a;
   font-size: 1.3rem;
@@ -492,12 +494,12 @@ main #contact form button {
   border: none;
   border-radius: 3px;
 }
-main #contact form button:hover {
+main #contact form .submit:hover {
   filter: brightness(1.3);
   color: #fff;
   transition: 50ms ease-in-out;
 }
-main #contact form button:hover:active {
+main #contact form .submit:hover:active {
   box-shadow: inset 2px 2px 10px #181818;
   color: #7a7a7a;
 }
