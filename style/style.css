@@ -275,7 +275,7 @@ main #games .container2 .textcar {
   max-width: 36rem;
 }
 main #games .container2 .textcar h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 main #games .container2 .textcar p {
@@ -313,7 +313,7 @@ main #games .slide2 .textcar h2, main #games .slide2 .textcar p {
   text-shadow: 15px 15px 5px #181818;
 }
 main #games .slide2 .textcar h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 main #games .slide2 .textcar p {
