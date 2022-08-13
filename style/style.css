@@ -228,7 +228,7 @@ main #works .works {
 }
 main #works .container {
   position: relative;
-  width: 100%;
+  width: 70%;
   padding: 0 10rem;
 }
 main #works .container .textcar {
@@ -253,6 +253,8 @@ main #works .container .textcar img:hover {
 
 main #games {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
   border-top: solid 1rem #272727;
 }
 main #games .big {
@@ -267,7 +269,7 @@ main #games .games {
 }
 main #games .container2 {
   position: relative;
-  width: 100%;
+  width: 70%;
   padding: 0 10rem;
 }
 main #games .container2 .textcar {

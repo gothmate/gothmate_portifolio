@@ -47,7 +47,7 @@
 
 @mixin sectionContainer
   position: relative
-  width: 100%
+  width: 70%
   padding: 0 10rem
 
 @mixin sectionCongig
@@ -282,6 +282,8 @@ main
   // ======================================
   #games
     position: relative
+    display: flex
+    justify-content: flex-end
     // overflow: hidden
     border-top: solid 1rem variables.$icon-color-base
     & .big
@@ -293,7 +295,6 @@ main
 
     & .container2
       @include sectionContainer
-
       .textcar
         padding: 5rem
         max-width: 36rem
