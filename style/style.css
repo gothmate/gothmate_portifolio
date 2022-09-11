@@ -78,14 +78,18 @@ aside {
   position: absolute;
   width: 70px;
   height: 70px;
-  left: 40%;
-  top: calc(18% - 35px + 0rem);
+  left: 45%;
+  top: 2.5rem;
   background: #222;
   border-radius: 50%;
   border: 6px solid #4a4a4a;
   transition: 0.5s;
 }
 
+.navigation ul {
+  position: relative;
+  height: fit-content;
+}
 .navigation ul li:nth-child(1).active {
   width: 95%;
 }
@@ -95,7 +99,6 @@ aside {
 .navigation ul li:nth-child(1).active ~ .indicator {
   transform: translateY(0rem);
 }
-
 .navigation ul li:nth-child(2).active {
   width: 95%;
 }
@@ -105,7 +108,6 @@ aside {
 .navigation ul li:nth-child(2).active ~ .indicator {
   transform: translateY(7rem);
 }
-
 .navigation ul li:nth-child(3).active {
   width: 95%;
 }
@@ -115,7 +117,6 @@ aside {
 .navigation ul li:nth-child(3).active ~ .indicator {
   transform: translateY(14rem);
 }
-
 .navigation ul li:nth-child(4).active {
   width: 95%;
 }
@@ -125,7 +126,6 @@ aside {
 .navigation ul li:nth-child(4).active ~ .indicator {
   transform: translateY(21rem);
 }
-
 .navigation ul li:nth-child(5).active {
   width: 95%;
 }
@@ -164,6 +164,11 @@ main #home .big {
 main #home .home {
   right: 50%;
   top: 70%;
+}
+main #home .bloco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main #home .texto {
   width: 40%;
