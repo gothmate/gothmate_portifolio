@@ -97,11 +97,11 @@
 						</a>
 					</div>
 				</div>
-                <div class="profile">
+        <div class="profile">
 					<div class="profilepic">
 						<img src="./assets/wow.jpg" alt="Profile picture" />
 					</div>
-                </div>
+        </div>
 			</section>
 
 			<section id="works" class="sections">
@@ -269,13 +269,15 @@
 			</section>
 
 			<section id="contact" class="sections">
-				<form action="mailto:gothmate@gmail.com" method="post" enctype="text/plain">
-					<div class="inputs">
-						<input placeholder="e-mail" class="email" type="email" name="email" />
-						<input placeholder="Nome" class="nameCustomer" type="text" name="Nome" />
+				<form action="https://formsubmit.co/a03425ac100b67602229732e282366ce" method="POST">
+					<input type="hidden" name="_captcha" value="false">
+					<div class="inputs form-group">
+						<input placeholder="seu e-mail" class="email" type="email" name="email" required />
+						<input placeholder="Nome" class="nameCustomer" type="text" name="Nome" required />
+						<input type="hidden" name="_subject" value="Novo Contato pelo Site!">
 					</div>
-					<textarea placeholder="Digite sua mensagem" class="box_text"></textarea>
-					<input type="submit" name="submit" value="Enviar" class="submit" onclick="enviaMensagem()" />
+					<textarea name="message" placeholder="Digite sua mensagem" class="box_text form-control"></textarea>
+					<button type="submit" name="submit" class="submit">Enviar</button>
 				</form>
 				<div class="balao">
 					<img class="getintouch big" src="./assets/GetInTouchBig.svg" alt="" />
@@ -286,6 +288,6 @@
 		</main>
 
 		<script src="main.js"></script>
-		<!-- <script src="script.js"></script> -->
+		<script src="script.js"></script>
 	</body>
 </html>
